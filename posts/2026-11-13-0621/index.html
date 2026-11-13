@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta name="devlogkit-build" content="20261113-062212">
+<title>We turned the heavy lighting back on · EternelDisciple — Epic AI MegaJam 2026 devlog</title>
+<style>:root{--bg:#faf9f6;--fg:#1c1c1e;--muted:#5b5b62;--accent:#a8401c;--card:#fff;--line:#e3e0d8;--tag:#f1e6dd;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#131315;--fg:#ececef;--muted:#a3a3ab;--accent:#ff9466;--card:#1c1c20;--line:#2f2f35;--tag:#3a2a22}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+.wrap{max-width:42rem;margin:0 auto;padding:0 1rem}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.25rem 1rem;align-items:baseline;padding-top:.9rem;padding-bottom:.9rem}
+header.site .brand{font-weight:700;color:var(--fg);text-decoration:none;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover,nav a[aria-current]{color:var(--accent)}
+nav{display:flex;gap:1rem;flex-wrap:wrap}
+main.wrap{padding:1.5rem 1rem 3rem}
+h1{font-size:1.75rem;line-height:1.25;margin:.2rem 0 .4rem}
+h2{font-size:1.25rem;margin:2rem 0 .5rem}
+h3{font-size:1.05rem;margin:1.4rem 0 .3rem}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.meta{color:var(--muted);font-size:.92rem;margin:0 0 1rem}
+figure{margin:1.2rem 0}
+figure img,figure video{display:block;width:100%;height:auto;border-radius:.6rem;background:var(--line)}
+figcaption{color:var(--muted);font-size:.88rem;margin-top:.35rem}
+figure.hero{margin-top:.5rem}
+blockquote{margin:1rem 0;padding:.4rem 1rem;border-left:4px solid var(--accent);background:var(--card);border-radius:0 .5rem .5rem 0}
+blockquote p{margin:.4rem 0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--tag);padding:.05em .3em;border-radius:.3em}
+ul,ol{padding-left:1.3rem}
+li{margin:.25rem 0}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--tag);color:var(--fg);padding:.05rem .45rem;border-radius:.3rem;vertical-align:.1em}
+.day{margin-top:2.2rem}
+.day h2{margin:0 0 .6rem;font-size:1.1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.card{display:flex;gap:.9rem;align-items:center;padding:.7rem;margin:.6rem 0;background:var(--card);border:1px solid var(--line);border-radius:.7rem;color:var(--fg);text-decoration:none}
+.card:hover{border-color:var(--accent)}
+.card img{width:7.5rem;aspect-ratio:16/9;object-fit:cover;border-radius:.45rem;flex:none;background:var(--line)}
+.card .t{font-weight:650;line-height:1.3;display:block}
+.card .s{color:var(--muted);font-size:.88rem}
+.empty{padding:2.2rem 1.2rem;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:.8rem}
+.empty .big{font-size:1.5rem;font-weight:700;margin:.2rem 0}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding:1.2rem 0 2rem}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+@media (min-width:40rem){h1{font-size:2rem}.card img{width:9.5rem}}</style>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="../../">EternelDisciple — Epic AI MegaJam 2026 devlog</a><nav><a href="../../">Posts</a><a href="../../tools/">Tools &amp; assets</a><a href="../../prepared/">Prepared before the jam</a></nav></div></header>
+<main class="wrap">
+<article><p class="meta">Day 2 · 06:21 (Paris) · Fri Nov 13, 2026</p><h1>We turned the heavy lighting back on</h1>
+<figure class="hero"><img src="../../media/2026-11-13-0621/2026-11-13_0617_vignettes_moteur_en.jpg" alt="Two small environments, a nave and a snowy terrace: raw render above, in-game pixel filter below" loading="lazy" decoding="async"><figcaption>Work in progress. Top row of each set: raw render. Bottom row: our current pixel filter.</figcaption></figure>
+<p><strong>In short</strong>: two tiny scenes to validate the whole set pipeline before the 7 arenas.</p>
+<h4>What we built</h4>
+<ul><li>A gothic architecture kit, scripted by us: 28 pieces.</li><li>Two final-look vignettes of a few square metres: an indoor nave and a terrace under snow.</li><li>Dynamic global illumination and many lights are back. We&#x27;re here for the tour de force.</li></ul>
+<h4>What the test showed</h4>
+<p>Raw, the nave works: cold moon shaft, warm braziers. Through our pixel filter it loses a notch: darks crush, and lit stone turns to noise.</p>
+<h4>Decision</h4>
+<p>We write our own pixel shader, v2. It pixelates at the source instead of averaging afterwards.</p></article><div class="pager"><a href="../2026-11-13-0542/">← Game feel: the boss now takes a breath</a><span></span></div>
+</main>
+<footer><div class="wrap">By EternelDisciple (solo) with AI agents. Static page: no trackers, no cookies, no external scripts.</div></footer>
+</body>
+</html>
